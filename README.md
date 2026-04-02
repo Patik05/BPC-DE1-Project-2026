@@ -2,18 +2,17 @@
 Project for the bachelor subject Digital Electronics 1, 2026 
 ## -- Main objective --
 
+### Button set imit <br />
+Use of 7 segment display <br />
+Use of buttons <br />
+Use of coloured diode <br />
 
-Button set Limit
-Use 7 segment display
-Use buttons
-Use colour diod
+### Buttons <br />
+1x increase time value <br />
+1x decrease time value <br />
+1x start the alarm clock/timewatch <br />
+1x switching modes (alarm clock/stopwatch, optional) <br />
 
-Buttons
-1x increase value
-1x decrease value
-1x start equal function
-1x switching mods (alarm clock, stopwatch)
-
-# -- Side objective --
-Stopwatch (switching between stopwatch and alarmclock)
-Buzzer
+## -- Side objective --
+Stopwatch (switching between stopwatch and alarmclock) <br />
+Buzzer <br />
