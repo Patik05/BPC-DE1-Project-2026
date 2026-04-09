@@ -1,0 +1,7 @@
+Time resolution is 1 ps
+Note: Pressing Right (btnr) 4 times to change alarm color to Cyan
+Time: 0 ps  Iteration: 0  Process: /ProjectDe_tb/stim_proc  File: C:/Users/270967/Documents/ProjectDe/ProjectDe.srcs/sim_1/new/ProjectDe_tb.vhd
+Note: Pressing Up (btnu) 2 times -> 00:00:02
+Time: 320 ns  Iteration: 0  Process: /ProjectDe_tb/stim_proc  File: C:/Users/270967/Documents/ProjectDe/ProjectDe.srcs/sim_1/new/ProjectDe_tb.vhd
+Note: Pressing Center (btnc) to start clock
+Time: 480 ns  Iteration: 0  Process: /ProjectDe_tb/stim_proc  File: C:/Users/270967/Documents/ProjectDe/ProjectDe.srcs/sim_1/new/ProjectDe_tb.vhd
