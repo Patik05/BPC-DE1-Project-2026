@@ -1,18 +1,20 @@
 # BPC-DE1-Project
 Project for the bachelor subject Digital Electronics 1, 2026 
+
 ## -- Main objective --
+Creation of a working alarm clock. The maximum amount of time set being a whole day (23:59:59). After the time runs out, colored diode lights up (or buzzer). </br>
 
-### Button set imit <br />
-Use of 7 segment display <br />
-Use of buttons <br />
-Use of coloured diode <br />
+### Usage of componenets <br />
+7 segment displays <br />
+buttons <br />
+color diodes <br />
 
-### Buttons <br />
-1x increase time value <br />
-1x decrease time value <br />
-1x start the alarm clock/timewatch <br />
-1x switching modes (alarm clock/stopwatch, optional) <br />
+### Functionality of buttons <br />
+1x increases time value (up)<br />
+1x decreases time value (down) <br />
+1x starts the alarm clock/stop the countdown (center) <br />
+1x resets the time (left) <br />
+1x changes the diode color (right) <br />
 
 ## -- Side objective --
-Stopwatch (switching between stopwatch and alarmclock) <br />
-Buzzer <br />
+Implementation of a buzzer (HW-508) <br />
