@@ -2,19 +2,82 @@
 Project for the bachelor subject Digital Electronics 1, 2026 
 
 ## -- Main objective --
-Creation of a working alarm clock. The maximum amount of time set being a whole day (23:59:59). After the time runs out, colored diode lights up (or buzzer). </br>
+Creation of a working alarm clock. The maximum amount of time set being a whole day (23:59:59). After the time runs out, colored diode lights up (or buzzer). The top module is called <ProjectDe.vhd> (will be renamed)
 
-### Usage of componenets <br />
-7 segment displays <br />
-buttons <br />
-color diodes <br />
+### -- Secondary objective --
+Implementation of a buzzer (HW-508)
 
-### Functionality of buttons <br />
-1x increases time value (up)<br />
-1x decreases time value (down) <br />
-1x starts the alarm clock/stop the countdown (center) <br />
-1x resets the time (left) <br />
-1x changes the diode color (right) <br />
+### -- List of used components on  the board --
+<table>
+  <thead>
+      <tr>
+        <th>
+      Component
+        </th>
+        <th>
+      Function
+        </th>
+      </tr>
+  </thead>
+  <tr>
+    <td>
+      Up button
+    </td>
+    <td>
+      Increases time value
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Down button
+    </td>
+    <td>
+      Decreases time value
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Center button
+    </td>
+    <td>
+      Starts the alarm clock/stops the countdown, stops the RGB diode signal after its been turned on
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Left button
+    </td>
+    <td>
+      Resets the time
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Right button
+    </td>
+    <td>
+      Changes the time incrementation/decrementation (by seconds, minutes, hours)
+    </td>
+  </tr>
+  <tr>
+    <td>
+      6x 7 segment displays
+    </td>
+    <td>
+      Displays the time in HH:MM:SS format
+    </td>
+  </tr>
+  <tr>
+    <td>
+      RGB diode
+    </td>
+    <td>
+      Signals when the time has run out
+    </td>
+  </tr>
+</table>
 
-## -- Side objective --
-Implementation of a buzzer (HW-508) <br />
+## -- Used hardware --
+The code runs on the <b>Nexys A7-50T</b> FPGA board.
+<img width="600" height="434" alt="obrazek" src="https://github.com/user-attachments/assets/14bbc566-4629-44aa-ba74-07658a58a81e" />
+<i>Note: The board in question.</i>
