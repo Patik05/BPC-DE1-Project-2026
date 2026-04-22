@@ -1,5 +1,6 @@
 # BPC-DE1-Project
 Project for the bachelor subject Digital Electronics 1, 2026 
+P.S. missing modules will be added till the end of thursday.
 
 ## -- Main objective --
 Creation of a working alarm clock. The maximum amount of time set being a whole day (23:59:59). After the time runs out, colored diode lights up (or buzzer).
