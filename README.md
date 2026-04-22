@@ -85,4 +85,4 @@ The code runs on the <b>Nexys A7-50T</b> FPGA board.
 ## -- Top level scheme --
 The top level being called ```Alarm_clock_top.vhd``` (will be corrected when we got to the lab back) <br>
 <img width="785" height="651" alt="obrazek" src="https://github.com/user-attachments/assets/e2853872-2b62-443d-8ae2-a32b12ba2f4a" />
-<i>Top level scheme</i>
+<i>Top level scheme - Still subject to change due to inconsistencies (one missing module)</i>
