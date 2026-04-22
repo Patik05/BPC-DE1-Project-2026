@@ -2,7 +2,7 @@
 Project for the bachelor subject Digital Electronics 1, 2026 
 
 ## -- Main objective --
-Creation of a working alarm clock. The maximum amount of time set being a whole day (23:59:59). After the time runs out, colored diode lights up (or buzzer). The top module is called <ProjectDe.vhd> (will be renamed)
+Creation of a working alarm clock. The maximum amount of time set being a whole day (23:59:59). After the time runs out, colored diode lights up (or buzzer).
 
 ### -- Secondary objective --
 Implementation of a buzzer (HW-508)
@@ -81,3 +81,8 @@ Implementation of a buzzer (HW-508)
 The code runs on the <b>Nexys A7-50T</b> FPGA board.
 <img width="600" height="434" alt="obrazek" src="https://github.com/user-attachments/assets/14bbc566-4629-44aa-ba74-07658a58a81e" />
 <i>Note: The board in question.</i>
+
+## -- Top level scheme --
+The top level being called ```Alarm_clock_top.vhd``` <br>
+<img width="785" height="651" alt="obrazek" src="https://github.com/user-attachments/assets/e2853872-2b62-443d-8ae2-a32b12ba2f4a" />
+<i>Top level scheme</i>
