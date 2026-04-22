@@ -1,5 +1,5 @@
 # BPC-DE1-Project
-Project for the bachelor subject Digital Electronics 1, 2026 
+Project for the bachelor subject Digital Electronics 1, 2026 <br>
 P.S. missing modules will be added till the end of thursday.
 
 ## -- Main objective --
