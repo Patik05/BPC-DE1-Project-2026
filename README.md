@@ -127,7 +127,7 @@ The code runs on the <b>Nexys A7-50T</b> FPGA board.
 
 ## Top level scheme
 The top level being called ```alarm_clock_top.vhd``` (will be corrected when we got to the lab back) <br>
-<img width="7974" height="6759" alt="schema_alarm_clock" src="https://github.com/user-attachments/assets/f6e73610-375a-4687-af56-0831f850e7e0" />
+<img width="7974" height="6768" alt="Schema_Script (1)" src="https://github.com/user-attachments/assets/ef1b1eff-767a-4138-9cea-7e517a7f0d5c" />
 <i>Top level scheme </i>
 
 
