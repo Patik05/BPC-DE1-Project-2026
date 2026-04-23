@@ -114,6 +114,12 @@ Table of signal coming into module ```buzzer_module ```:
 <img width="974" height="159" alt="image" src="https://github.com/user-attachments/assets/db3c7fa3-a3d6-47c1-a542-b50b61c34eca" />
 <i>Requires to manually change the C_MAX value in buzzer_module to 2 for simulation purposes</i>
 
+RTL analysis Schematic
+<img width="1025" height="638" alt="image" src="https://github.com/user-attachments/assets/7fb00ab4-e502-406d-8be2-2bc1809ae96c" />
+
+
+
+
 ## Used hardware
 The code runs on the <b>Nexys A7-50T</b> FPGA board.
 <img width="600" height="434" alt="obrazek" src="https://github.com/user-attachments/assets/14bbc566-4629-44aa-ba74-07658a58a81e" />
