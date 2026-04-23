@@ -1,13 +1,13 @@
 # BPC-DE1-Project
 Project for the bachelor subject Digital Electronics 1, 2026 <br>
 
-## -- Main objective --
-Creation of a working alarm clock. The maximum amount of time set being a whole day (23:59:59). After the time runs out, colored diode lights up (or buzzer).
+## Main objective 
+Creation of a working alarm clock. The maximum amount of time set being a whole day (23:59:59). After the time runs out, colored diode lights up (or a buzzer).
 
-### -- Secondary objective --
+### Secondary objective
 Implementation of a buzzer (HW-508)
 
-### -- List of used components on  the board --
+### List of used components on  the board
 <table>
   <thead>
       <tr>
@@ -77,12 +77,40 @@ Implementation of a buzzer (HW-508)
   </tr>
 </table>
 
-## -- Used hardware --
+## Custom modules
+The project contains new custom modules  ```alarm_clock ``` and  ```buzzer_module ``` wrapped in a top level  ```alarm_clock_top ```.
+
+Table of signal coming into module ```alarm_clock ```:
+| Port name | Direction | Type | Description |
+|:---------:|:---------:|:----:|:-----------:|
+| clk | in | std_logic | Main clock |
+| sig_reset | in |  std_logic | Resets clock to 00:_00:00|
+| sig_in | in |  std_logic | Increment time |
+| sig_dec | in |  std_logic | Decrement time |
+| sig_mode | in |  std_logic | Cycle edit mode (sec -> min -> hr) |
+| sig_play_pause | in |  std_logic | Toggle countdown/silence alarm |
+| ce_1hz | in |  std_logic | 1 Hz enable pulse for real-time counting |
+| disp_data | out |  std_logic_vector(23:0) | Packed BCD for displays |
+| alarm_activate | out |  std_logic | Activates when timer hits 0 |
+
+Table of signal coming into module ```buzzer_module ```:
+| Port name | Direction | Type | Description |
+|:---------:|:---------:|:----:|:-----------:|
+| clk | in | std_logic | Main clock |
+| en | in | std_logic | Enable |
+| buzzer_out | out | std_logic | Buzzer output |
+
+
+## Used hardware
 The code runs on the <b>Nexys A7-50T</b> FPGA board.
 <img width="600" height="434" alt="obrazek" src="https://github.com/user-attachments/assets/14bbc566-4629-44aa-ba74-07658a58a81e" />
 <i>Note: The board in question.</i>
 
-## -- Top level scheme --
+## Top level scheme
 The top level being called ```alarm_clock_top.vhd``` (will be corrected when we got to the lab back) <br>
 <img width="785" height="651" alt="obrazek" src="https://github.com/user-attachments/assets/e2853872-2b62-443d-8ae2-a32b12ba2f4a" />
 <i>Top level scheme - Still subject to change due to inconsistencies (one missing module)</i>
+
+
+
+
