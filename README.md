@@ -1,6 +1,5 @@
 # BPC-DE1-Project
 Project for the bachelor subject Digital Electronics 1, 2026 <br>
-P.S. missing modules will be added till the end of thursday.
 
 ## -- Main objective --
 Creation of a working alarm clock. The maximum amount of time set being a whole day (23:59:59). After the time runs out, colored diode lights up (or buzzer).
@@ -84,6 +83,6 @@ The code runs on the <b>Nexys A7-50T</b> FPGA board.
 <i>Note: The board in question.</i>
 
 ## -- Top level scheme --
-The top level being called ```Alarm_clock_top.vhd``` (will be corrected when we got to the lab back) <br>
+The top level being called ```alarm_clock_top.vhd``` (will be corrected when we got to the lab back) <br>
 <img width="785" height="651" alt="obrazek" src="https://github.com/user-attachments/assets/e2853872-2b62-443d-8ae2-a32b12ba2f4a" />
 <i>Top level scheme - Still subject to change due to inconsistencies (one missing module)</i>
