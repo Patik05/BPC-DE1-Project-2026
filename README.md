@@ -5,87 +5,22 @@ Project for the bachelor subject Digital Electronics 1, 2026 <br>
 Creation of a working alarm clock. The maximum amount of time set being a whole day (23:59:59). After the time runs out, colored diode lights up and buzzer. The user should be able to increase/decrease time either by seconds, minutes and hours. After setting time and running the alarm clock, the user is blocked to manipulate the time (unless the time is stopped).
 
 ### List of used components on  the board
-<table>
-  <thead>
-      <tr>
-        <th>
-      Component
-        </th>
-        <th>
-      Function
-        </th>
-      </tr>
-  </thead>
-  <tr>
-    <td>
-      Up button
-    </td>
-    <td>
-      Increases time value
-    </td>
-  </tr>
-  <tr>
-    <td>
-      Down button
-    </td>
-    <td>
-      Decreases time value
-    </td>
-  </tr>
-  <tr>
-    <td>
-      Center button
-    </td>
-    <td>
-      Starts the alarm clock/stops the countdown, stops the RGB diode signal after its been turned on
-    </td>
-  </tr>
-  <tr>
-    <td>
-      Left button
-    </td>
-    <td>
-      Resets the time
-    </td>
-  </tr>
-  <tr>
-    <td>
-      Right button
-    </td>
-    <td>
-      Changes the time incrementation/decrementation (by seconds, minutes, hours)
-    </td>
-  </tr>
-  <tr>
-    <td>
-      6x 7 segment displays
-    </td>
-    <td>
-      Displays the time in HH:MM:SS format
-    </td>
-  </tr>
-  <tr>
-    <td>
-      RGB diode
-    </td>
-    <td>
-      Signals when the time has run out
-    </td>
-  </tr>
-</table>
+| Component | Function |
+| :--- | :--- |
+| BTNU Up button | Increases time value |
+| BTND Down button | Decreases time value |
+| BTNC Center button | Starts the alarm clock/stops the countdown, stops the RGB diode signal after its been turned on |
+| BTNL Left button | Resets the time |
+| BTNR Right button | Changes the time incrementation/decrementation (by seconds, minutes, hours) |
+| 6x 7 segment displays | Displays the time in HH:MM:SS format |
+| RGB diode | Signals when the time has run out |
 
 ## Custom modules
-The project contains new custom modules wrapped into  ```alarm_clock_top ``` top level:
-<ul>
-  <li>
-``alarm_clock ```
-  </li>
-  <li>
-```buzzer_module ```
-  </li>
-</ul>
-
-Table of signal coming into module ```alarm_clock ```:
+The project contains new custom modules wrapped into  ```alarm_clock_top.vhd ``` top level:
+- ```alarm_clock.vhd ```
+- ```buzzer_module.vhd ```
+  
+Table of signal coming into module ```alarm_clock.vhd ```:
 | Port name | Direction | Type | Description |
 |:---------:|:---------:|:----:|:-----------:|
 | clk | in | std_logic | Main clock |
@@ -128,7 +63,7 @@ The code runs on the <b>Nexys A7-50T</b> FPGA board.
 ## Top level scheme
 The top level being called ```alarm_clock_top.vhd``` (will be corrected when we got to the lab back) <br>
 <img width="7974" height="6768" alt="Schema_Script (1)" src="https://github.com/user-attachments/assets/ef1b1eff-767a-4138-9cea-7e517a7f0d5c" />
-<i>Top level scheme </i>
+<i>Top level scheme</i>
 
 
 
