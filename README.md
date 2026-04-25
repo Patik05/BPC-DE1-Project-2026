@@ -87,7 +87,7 @@ The test provides us the following events:
 - buzzer_out (teal) the buzzer recieves 50% duty cycle square wave
 
 ### Conclusion
-The test shows us, that the buzzer recieves 50% duty cycle square wave, whne its enabled. Otherwise, it stay at flat 0%.
+The test shows us, that the buzzer recieves 50% duty cycle square wave, when its enabled.
 
 ## JA Pmod connectors (Nexys A7)
 In the actual realization for the buzzer to be functional, it is neccesary to note which actual port the buzzer (in our case HW508) should be connected. The constraint file is set to expect the buzzer in port C17:
@@ -127,4 +127,4 @@ The top level being called ```alarm_clock_top.vhd``` <br>
 
 3. Tomas Fryza, vhdl-examples. [VHDL examples](https://github.com/tomas-fryza/vhdl-examples/tree/master)
 
-4. Microcontrollerslab [Image for the buzzer pinouts](https://microcontrollerslab.com/buzzer-module-interfacing-arduino-sound-code/)
+4. Microcontrollerslab. [Image for the buzzer pinouts](https://microcontrollerslab.com/buzzer-module-interfacing-arduino-sound-code/)
