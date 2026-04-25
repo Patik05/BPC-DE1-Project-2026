@@ -44,7 +44,11 @@ begin
     p_timer : process(clk)
     begin
         if rising_edge(clk) then
-
+            if sig_reset = '1' then 
+                -- 1. Synchronous Reset First
+                sec0 <= 0; sec1 <= 0; min0 <= 0; min1 <= 0; hr0 <= 0; hr1 <= 0;
+                is_zero <= '0'; edit_mode <= 0; counting_down <= '0';
+            else
             -- Play / Pause / Silence Logic
             if sig_play_pause = '1' then
                 if is_zero = '1' then
