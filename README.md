@@ -117,7 +117,7 @@ The code runs on the <b>Nexys A7-50T</b> FPGA board.
 <i>RTL analysis Schematic</i>
 
 The top level being called ```alarm_clock_top.vhd``` <br>
-![top_level_scheme](images/Schema_Alarm_clock.png)<br>
+![top_level_scheme](images/alarm_clock_scheme.png)<br>
 <i>Top level scheme</i>
 
 ## References
