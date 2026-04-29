@@ -126,6 +126,10 @@ The top level being called `alarm_clock_top` <br>
 ![top_level_scheme](images/alarm_clock_scheme.png)<br>
 <i>Top level scheme</i>
 
+## Poster
+[Project poster](images/PosterAlarmClock.png)<br>
+<i>Draft of the project poster</i>
+
 ## Team members and the work
 | Name | Responsibility |
 | :--- | :------------- |
