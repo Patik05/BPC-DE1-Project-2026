@@ -57,7 +57,7 @@ The module operates with three states: `Setup mode` (paused, being editable) and
 
 Outcome of `alarm_clock_tb`:
 ![alarm_clock_tb](images/sim1_alarm_clock_tb.png)<br>
-The display of the simulation shows us an example of the alarm clock responding to incoming signals.
+<i>The display of the simulation shows us an example of the alarm clock responding to incoming signals.</i>
 
 The test provides us the following events:
 - sig_reset is used to be sure that all used variables for the clock are indeed at the starting values.
