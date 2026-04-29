@@ -121,8 +121,6 @@ The code runs on the <b>Nexys A7-50T</b> FPGA board.
 
 ## Top level schematics
 Each button uses a different version of debouce module with instantations (hence the top level scheme contains `debounce_up`, `debounce_down`, etc.)
-![rtl_schematic](images/rtl.png)<br>
-<i>RTL analysis Schematic</i>
 
 The top level being called `alarm_clock_top` <br>
 ![top_level_scheme](images/alarm_clock_scheme.png)<br>
