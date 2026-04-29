@@ -2,7 +2,7 @@
 Project for the bachelor subject Digital Electronics 1, 2026 <br>
 
 ##  Main objective
-Creation of a working alarm clock. The maximum amount of time set being a whole day (23.59.59 <=> HH.MM.SS). After the time runs out, colored diode lights up and buzzer starts buzzing. The user should be able to increase/decrease time either by seconds, minutes and hours. After setting time and running the alarm clock, the user is blocked to manipulate the time (unless the time is stopped).
+Create working alarm clock. Maximum amount of time being possible to set being a day (23.59.59 <=> HH.MM.SS). User should be able to increase/decrease units of time by second, minutes and hours (depending on the mode set). After the set time is satisfactory, user may start the alarm clock. While the clock is running, the user is effectively blocked from manipulating with the alarm clock time, unless the countdown is stopped (time running out or pressing the stop/start button). When the set time runs out, a coloured red diode lights up and buzzer starts buzzing. It continues to signal until the stop/start button gets pressed.
 
 ### List of used hardware components of the board
 | Component | Function |
