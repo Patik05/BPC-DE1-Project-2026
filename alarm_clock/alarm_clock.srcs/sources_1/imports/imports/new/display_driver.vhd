@@ -50,12 +50,10 @@ begin
     -- Clock enable generator for refresh timing
     ------------------------------------------------------------------------
     clock_0 : clk_en
-    -- The eye normally catches up above 16 ms. The more display, the more devided
-    -- the period should be
-        --generic map ( G_MAX => 800_000 )
-        generic map ( G_MAX => 80_000 )  -- Adjust for flicker-free multiplexing
-        port map (                   -- For simulation: 32
-            clk => clk,              -- For implementation: 3_200_000
+    -- The eye normally catches up above 16 ms. The more display, the more divided the period should be (at minumum)
+        generic map ( G_MAX => 80_000 )  -- Adjusted for flicker-free multiplexing
+        port map (                    
+            clk => clk,              
             rst => rst,
             ce  => sig_en
         );
@@ -64,7 +62,7 @@ begin
     -- N-bit counter for digit selection
     ------------------------------------------------------------------------
     counter_0 : counter
-        generic map ( G_BITS => 3 )
+        generic map ( G_BITS => 3 ) -- 3 bit binary
         port map (
             clk => clk,
             rst => rst,
@@ -73,7 +71,7 @@ begin
         );
 
     ------------------------------------------------------------------------
-    -- Digit select
+    -- Digit selection
     ------------------------------------------------------------------------
     p_mux : process(sig_digit, data)
         begin
@@ -98,8 +96,7 @@ begin
         );
 
     ------------------------------------------------------------------------
-    -- Anode select process
-    -- Requires an update!
+    -- Anode select process, one at the time (but so fast, the human eye does not register)
     ------------------------------------------------------------------------
     p_anode_select : process (sig_digit) is
     begin
