@@ -4,16 +4,27 @@ Project for the bachelor subject Digital Electronics 1, 2026 <br>
 ##  Main objective
 Create working alarm clock. Maximum amount of time being possible to set being a day (23.59.59 <=> HH.MM.SS). User should be able to increase/decrease units of time by second, minutes and hours (depending on the mode set). After the set time is satisfactory, user may start the alarm clock. While the clock is running, the user is effectively blocked from manipulating with the alarm clock time, unless the countdown is stopped (time running out or pressing the stop/start button). When the set time runs out, a coloured red diode lights up and buzzer starts buzzing. It continues to signal until the stop/start button gets pressed.
 
+## Top level schematics
+Each button uses a different version of debouce module with instantations (hence the top level scheme contains `debounce_up`, `debounce_down`, etc.)
+
+The top level being called `alarm_clock_top` <br>
+![top_level_scheme](images/alarm_clock_scheme.png)<br>
+<i>Top level scheme</i>
+
+## Button layout
+<img src="images/button_layout.png" alt="Button layout" width="260px" height ="300px"><br>
+<i>Button layout functionality</i>
+
 ### List of used hardware components of the board
 | Component | Function |
 | :--- | :----- |
-| `BTNU` - Up button | Increases time value |
-| `BTND` - Down button | Decreases time value |
-| `BTNC` - Center button | Starts/stops the alarm clock the countdown, stops buzzer noise + the RGB diode after the timer runs out |
-| `BTNL` - Left button | Resets the time |
-| `BTNR` - Right button | Changes the time incrementation/decrementation (by seconds, minutes, hours) |
-| `6x 7-segment displays` | Displays the time in HH.MM.SS format |
-| `RGB diode` | Signals output in red when the time runs out |
+| `BTNU - Up button` | Increases time value |
+| `BTND - Down button` | Decreases time value |
+| `BTNC - Center button` | Starts/stops the alarm clock the countdown, stops buzzer noise + the RGB diode after the timer runs out |
+| `BTNL - Left button` | Resets the time |
+| ```BTNR - Right button``` | Changes the time incrementation/decrementation (by seconds, minutes, hours) |
+| ```6x 7-segment displays``` | Displays the time in HH.MM.SS format |
+| ```RGB diode``` | Signals output in red when the time runs out |
 
 ## Modules
 Everything is wrapped into top level `alarm_clock_top` ([code](alarm_clock/alarm_clock.srcs/sources_1/new/alarm_clock_top.vhd))
@@ -119,16 +130,11 @@ The code runs on the <b>Nexys A7-50T</b> FPGA board.
 ![nexys_board](images/nexys_board.png)<br>
 <i>Note: The board in question.</i>
 
-## Top level schematics
-Each button uses a different version of debouce module with instantations (hence the top level scheme contains `debounce_up`, `debounce_down`, etc.)
-
-The top level being called `alarm_clock_top` <br>
-![top_level_scheme](images/alarm_clock_scheme.png)<br>
-<i>Top level scheme</i>
-
-## Button layout
-<img src="images/button_layout.png" alt="Button layout" width="260px" height ="300px"><br>
-<i>Button layout functionality</i>
+## Utilization
+The project utilizes:
+- 224 out of 65200 flip-flops (0.34%)
+- 32 out of 210 I/O ports (15.24%)
+- 149 out of 32600 LUT (0.46%)
 
 ## Poster
 [Project poster](images/alarm_clock_poster.png)<br>
