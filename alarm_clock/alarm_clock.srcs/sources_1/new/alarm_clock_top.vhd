@@ -61,7 +61,13 @@ architecture Behavioral of alarm_clock_top is
     end component alarm_clock;
 
     component display_driver is
-        port( data : in std_logic_vector(23 downto 0); clk : in std_logic; rst : in std_logic; seg : out std_logic_vector(6 downto 0); anode : out std_logic_vector(5 downto 0) );
+        port( data : in std_logic_vector(23 downto 0);
+         clk : in std_logic;
+         rst : in std_logic;
+         seg : out std_logic_vector(6 downto 0);
+         anode : out std_logic_vector(5 downto 0);
+         dp : out std_logic
+         );
     end component display_driver;
 
     component buzzer_module is
@@ -115,7 +121,8 @@ begin
             clk   => clk,
             rst   => '0',
             seg   => seg,
-            anode => an(5 downto 0)
+            anode => an(5 downto 0),
+            dp    => dp
         );
 
     -- Square wave generator for the HW-508
@@ -131,7 +138,6 @@ begin
     ------------------------------------------------------------------------
     led16_r        <= is_zero;
     led            <= (others => '0');
-    dp             <= '1';
     an(7 downto 6) <= "11"; -- Keep unused digits dark
 
 end Behavioral;

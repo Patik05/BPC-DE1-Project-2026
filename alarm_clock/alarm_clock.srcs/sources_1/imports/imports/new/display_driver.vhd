@@ -7,7 +7,8 @@ entity display_driver is
            --data : in STD_LOGIC_VECTOR (7 downto 0);
            data : in STD_LOGIC_VECTOR (23 downto 0);
            seg : out STD_LOGIC_VECTOR (6 downto 0);
-           anode : out STD_LOGIC_VECTOR (5 downto 0));
+           anode : out STD_LOGIC_VECTOR (5 downto 0);
+           dp : out STD_LOGIC);
 end display_driver;
 
 architecture Behavioral of display_driver is
@@ -110,5 +111,5 @@ begin
             when others => anode <= "111111"; -- All off
         end case;
     end process;
-
+    dp <= '0' when (sig_digit = "100" or sig_digit = "010" or sig_digit = "000") else '1';
 end Behavioral;
