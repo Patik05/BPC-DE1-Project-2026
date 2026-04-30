@@ -131,7 +131,7 @@ The top level being called `alarm_clock_top` <br>
 <i>Button layout functionality</i>
 
 ## Poster
-[Project poster](images/poster_alarm_clock_.jpg)<br>
+[Project poster](images/alarm_clock_poster.png)<br>
 <i>Draft of the project poster</i>
 
 ## Team members and the work
