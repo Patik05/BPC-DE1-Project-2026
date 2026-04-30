@@ -54,10 +54,7 @@ begin
         -- 2. Test Pattern 1: Time is "12:34:56"
         -- In Hex: 1=x"1", 2=x"2", 3=x"3", 4=x"4", 5=x"5", 6=x"6"
         data <= x"123456";
-
-        -- Wait enough time for the multiplexer to cycle through all 6 digits
-        -- at least twice. If G_MAX is 4, it switches every 40ns.
-        -- 6 digits * 40ns = 240ns for a full sweep.
+.
         wait for 200 ns;
 
         -- 3. Test Pattern 2: Time is "09:00:00"

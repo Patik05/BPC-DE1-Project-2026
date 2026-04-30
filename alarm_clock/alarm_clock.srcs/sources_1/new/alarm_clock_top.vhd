@@ -97,7 +97,8 @@ begin
     debounce_right  : debounce port map (clk => clk, btn_in => btnr, btn_press => sig_mode_pulse, btn_state => open);
 
     clock_1hz : clk_en
-        generic map ( G_MAX => 100_000_000 )
+        generic map ( G_MAX => 100_000_000 ) -- Change this, if you want to change the speed of the countdown
+        --generic map ( G_MAX => 50_000_000) -- Double the speed
         port map (clk => clk, rst => '0', ce  => ce_1hz);
 
     -- The Brain
