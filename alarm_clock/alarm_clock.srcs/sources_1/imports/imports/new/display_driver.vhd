@@ -4,7 +4,6 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity display_driver is
     Port ( clk : in STD_LOGIC;
            rst : in STD_LOGIC;
-           --data : in STD_LOGIC_VECTOR (7 downto 0);
            data : in STD_LOGIC_VECTOR (23 downto 0);
            seg : out STD_LOGIC_VECTOR (6 downto 0);
            anode : out STD_LOGIC_VECTOR (5 downto 0);
@@ -52,7 +51,8 @@ begin
     ------------------------------------------------------------------------
     clock_0 : clk_en
     -- The eye normally catches up above 16 ms. The more display, the more divided the period should be (at minumum)
-        generic map ( G_MAX => 80_000 )  -- Adjusted for flicker-free multiplexing
+        --generic map ( G_MAX => 4 )  -- For simulation purposes
+        generic map ( G_MAX => 80_000)  -- Adjusted for flicker-free multiplexing, they are one at the time (but so fast, the human eye does not register)
         port map (                    
             clk => clk,              
             rst => rst,
@@ -97,7 +97,7 @@ begin
         );
 
     ------------------------------------------------------------------------
-    -- Anode select process, one at the time (but so fast, the human eye does not register)
+    -- Anode select process
     ------------------------------------------------------------------------
     p_anode_select : process (sig_digit) is
     begin
@@ -111,5 +111,5 @@ begin
             when others => anode <= "111111"; -- All off
         end case;
     end process;
-    dp <= '0' when (sig_digit = "100" or sig_digit = "010" or sig_digit = "000") else '1';
+    dp <= '0' when (sig_digit = "100" or sig_digit = "010") else '1';
 end Behavioral;
