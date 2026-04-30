@@ -45,16 +45,17 @@ begin
     begin
         if rising_edge(clk) then
             if sig_reset = '1' then 
-                -- 1. Synchronous Reset First
-                sec0 <= 0; sec1 <= 0; min0 <= 0; min1 <= 0; hr0 <= 0; hr1 <= 0;
-                is_zero <= '0'; edit_mode <= 0; counting_down <= '0';
-            else
-            -- Play / Pause / Silence Logic
-            if sig_play_pause = '1' then
-                if is_zero = '1' then
-                    is_zero <= '0'; -- Silence the alarm
+                    -- 1. Synchronous Reset First
+                    sec0 <= 0; sec1 <= 0; min0 <= 0; min1 <= 0; hr0 <= 0; hr1 <= 0;
+                    is_zero <= '0'; edit_mode <= 0; counting_down <= '0';
                 else
-                    counting_down <= not counting_down; -- Toggle play/pause
+                -- Play / Pause / Silence Logic
+                if sig_play_pause = '1' then
+                    if is_zero = '1' then
+                        is_zero <= '0'; -- Silence the alarm
+                    else
+                        counting_down <= not counting_down; -- Toggle play/pause
+                    end if;
                 end if;
             end if;
 
