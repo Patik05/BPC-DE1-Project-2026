@@ -16,7 +16,7 @@ Create working alarm clock. Maximum amount of time being possible to set being a
 | `RGB diode` | Signals output in red when the time runs out |
 
 ## Modules
-Everything is wrapped into top level `alarm_clock_top`
+Everything is wrapped into top level `alarm_clock_top` ([code](alarm_clock/alarm_clock.srcs/sources_1/new/alarm_clock_top.vhd))
 Custom new modules:
 - ```alarm_clock``` ([code](alarm_clock/alarm_clock.srcs/sources_1/new/alarm_clock.vhd))
 - ```buzzer_module``` ([code](alarm_clock/alarm_clock.srcs/sources_1/new/buzzer_module.vhd))
@@ -125,6 +125,10 @@ Each button uses a different version of debouce module with instantations (hence
 The top level being called `alarm_clock_top` <br>
 ![top_level_scheme](images/alarm_clock_scheme.png)<br>
 <i>Top level scheme</i>
+
+## Button layout
+<img src="images/button_layout.png" alt="Button layout" width="260px" height ="300px"><br>
+<i>Button layout functionality</i>
 
 ## Poster
 [Project poster](images/PosterAlarmClock.png)<br>
