@@ -1,6 +1,6 @@
 # BPC-DE1-Project Alarm clock
 Project for the bachelor subject Digital Electronics 1, 2026 <br>
-<i>Note, some browsers may slightly change the view of markdown tables. This file was formated with Librewolf (Firefox variation) view in mind.</i>
+<i>Note, some browsers may slightly change the looks of markdowns tables. This README.md was formated with LibreWolf (Firefox variation).</i>
 
 ## Team members and the work
 | Name | Responsibility |
@@ -128,7 +128,7 @@ The test provides us the following events:
 - buzzer_out (teal) the buzzer recieves 50% duty cycle square wave
 
 ### Conclusion
-The test shows us, that the buzzer recieves 50% duty cycle square wave, when its enabled.
+The test shows us that the buzzer recieves 50% duty cycle square wave when its enabled.
 
 ## Utilization
 The project utilization of the board resources after synthesis:
@@ -165,9 +165,8 @@ The code runs on the <b>Nexys A7-50T</b> FPGA board.
 <i>Draft of the project poster</i>
 
 ## Showcase video
-<video width="800" height="300" controls>
-  <source src="https://youtu.be/qTqv-hoEQLM" type="video/mp4">
-</video>
+[Showcase video](https://youtu.be/qTqv-hoEQLM)<br>
+<i>Functionality shown in the video</i>
 
 ## Used tools
 - Vivado: Overall used to start the project. Used for subsequent project testing and creation of bitstream.
