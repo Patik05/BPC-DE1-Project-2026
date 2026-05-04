@@ -23,6 +23,14 @@ The top level being called [`alarm_clock_top`](alarm_clock/alarm_clock.srcs/sour
 <i>Note: the project is made to use countdown with actual time seconds. However, if we desire to change the speed of the countdown, we must modify the top level schemes [`alarm_clock_top`](alarm_clock/alarm_clock.srcs/sources_1/new/alarm_clock_top.vhd) generic map for `clk_en` generic map G_MAX.</i>
 ![change_countdown_speed](images/countdown_modification.png)
 
+## Utilization
+Utilization of board resources after project synthesis:
+| Type | Usage | Maximum | Percentual (%)|
+| :-- | :---: | :-----: | :---:|
+| Flip-flops | 224 | 65200| 0.34 |
+| In/Out | 32 | 210 | 15.24 |
+| LUT | 149 | 32600 | 0.46 |
+
 ## Button layout
 <img src="images/button_layout.png" alt="Button layout" width="260px" height ="300px"><br>
 <i>Button layout functionality</i>
@@ -125,22 +133,14 @@ Outcome of [`buzzer_module_tb.vhd`](alarm_clock/alarm_clock.srcs/sim_1/new/buzze
 
 The test provides us the following events:
 - en (dark blue) signals us, that the buzzer should be turned on. In this case the duration is 300 ns
-- buzzer_out (teal) the buzzer recieves 50% duty cycle square wave
+- buzzer_out (teal) the buzzer receives 50% duty cycle square wave
 
 ### Conclusion
 The test shows us that the buzzer recieves 50% duty cycle square wave when its enabled.
 
-## Utilization
-The project utilization of the board resources after synthesis:
-| Type | Usage | Maximum | Percentual (%)|
-| :-- | :---: | :-----: | :---:|
-| Flip-flops | 224 | 65200| 0.34 |
-| In/Out | 32 | 210 | 15.24 |
-| LUT | 149 | 32600 | 0.46 |
-
 
 ## JA Pmod connectors (Nexys A7)
-In the actual realization for the buzzer to be functional, it is neccesary to note which actual port the buzzer (in our case HW508) should be connected. The constraint file is set to expect the buzzer in port C17:
+In the actual realization for the buzzer to be functional, it is necessary to note which actual port, the buzzer (in our case HW508), should be connected. The constraints file is set to expect the buzzer in port C17:
 
 `set_property -dict { PACKAGE_PIN C17 IOSTANDARD LVCMOS33 } [get_ports {buzzer}];`
 
@@ -158,7 +158,7 @@ It is expected to connect the buzzer Signal pin to the rightmost corner of the J
 ## Used hardware
 The code runs on the <b>Nexys A7-50T</b> FPGA board.
 ![nexys_board](images/nexys_board.png)<br>
-<i>Note: The board in question.</i>
+<i>The board in question.</i>
 
 ## Poster
 [Project poster](images/alarm_clock_poster.png)<br>
@@ -174,6 +174,8 @@ The code runs on the <b>Nexys A7-50T</b> FPGA board.
 - VSCode: Home edits for the repository.
 - Draw.IO: Used for the top level scheme image.
 - Gemini AI: Used to help fix the buzzer issues (and the subsequent module)
+- Krita: For the button layout image and a modification to the original buzzer pinout.
+- Word: The poster
 
 ## References
 1. Digilent blog. [Nexys A7 Reference Manual](https://reference.digilentinc.com/reference/programmable-logic/nexys-a7/reference-manual)
@@ -182,4 +184,6 @@ The code runs on the <b>Nexys A7-50T</b> FPGA board.
 
 3. Tomas Fryza, vhdl-examples. [VHDL examples](https://github.com/tomas-fryza/vhdl-examples/tree/master)
 
-4. Microcontrollerslab. [Modifiend image for the buzzer pinouts](https://microcontrollerslab.com/buzzer-module-interfacing-arduino-sound-code/)
+4. Microcontrollerslab. [Modified image for the buzzer pinouts](https://microcontrollerslab.com/buzzer-module-interfacing-arduino-sound-code/)
+
+5. Pinclipart [The poster cartoon image](https://www.pinclipart.com/downpngs/bhwixx_open-alarm-clock-cartoon-gif-clipart/)
